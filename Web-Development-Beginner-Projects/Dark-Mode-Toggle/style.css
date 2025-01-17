@@ -1,0 +1,33 @@
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --text-white: white;
+  --toggle-color: rgba(249, 115, 22, var(--tw-bg-opacity, 1));
+  --bg-header-darkMode: rgba(30, 27, 75, var(--tw-bg-opacity, 1));
+  --bg-header-lightMode: rgba(255, 255, 255, var(--tw-bg-opacity, 1));
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  --bg-color: rgba(30, 27, 75, var(--tw-bg-opacity, 1));
+  --text-color: white;
+  --toggle-color: #007bff;
+}
+
+header {
+  background-color: var(--bg-header-lightMode);
+  color: var(--text-color);
+}
+
+header.darkmode {
+  background-color: var(--bg-header-darkMode);
+  color: var(--text-color);
+}

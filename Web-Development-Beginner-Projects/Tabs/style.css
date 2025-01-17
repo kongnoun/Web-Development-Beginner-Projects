@@ -1,0 +1,64 @@
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --text-white: white;
+  --toggle-color: rgba(249, 115, 22, var(--tw-bg-opacity, 1));
+  --bg-header-darkMode: rgba(30, 27, 75, var(--tw-bg-opacity, 1));
+  --bg-header-lightMode: rgba(255, 255, 255, var(--tw-bg-opacity, 1));
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  overflow: hidden;
+  color: var(--text-white);
+}
+
+.grid-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.3) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 1px, transparent 1px);
+  background-size: 80px 80px;
+    
+  z-index: -1;
+  overflow: hidden;;
+  /* Adjust the grid cell size */
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.after-3d {
+  position: relative;
+}
+
+.after-3d::after {
+  content: '';
+  background-color: white;;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  border: 2px solid rgba(249, 115, 22, 1);
+  box-shadow: 8px 8px 8px rgb(255, 166, 0, 0.8);
+  /* Orange border */
+  transform: translate(-17px, -16px);
+  /* Creates the 3D offset effect */
+  z-index: -1;
+  /* Pushes the pseudo-element behind */
+}
