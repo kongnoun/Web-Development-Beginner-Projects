@@ -3,8 +3,6 @@
   --text-color: black;
   --text-white: white;
   --toggle-color: rgba(249, 115, 22, var(--tw-bg-opacity, 1));
-  --bg-header-darkMode: rgba(30, 27, 75, var(--tw-bg-opacity, 1));
-  --bg-header-lightMode: rgba(255, 255, 255, var(--tw-bg-opacity, 1));
 }
 
 body {
@@ -28,10 +26,11 @@ body {
     linear-gradient(to right, rgba(0, 0, 0, 0.3) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 1px, transparent 1px);
   background-size: 80px 80px;
-    
   z-index: -1;
-  overflow: hidden;;
-  /* Adjust the grid cell size */
+}
+
+.button {
+  transition: all 0.45s ease;
 }
 
 .content {
@@ -41,24 +40,60 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.after-3d {
-  position: relative;
+.live {
+  background-color: white;
+  color: white;
+  font-weight: bold;
 }
 
-.after-3d::after {
-  content: '';
-  background-color: white;;
-  position: absolute;
-  top: 10px;
-  left: 10px;
+.content {
+  display: none;
+}
+
+.button:not(.live) {
+  background-color: white;
+  color: orange;
+  font-weight: bold;
+}
+
+.button:is(.live) {
+  background-color: #F97316;
+  border: 2px solid white;
+}
+
+.button:hover:not(.live) {
+  background: #e93b81;
+  color: white;
+}
+
+.content.live {
+  display: block;
+}
+
+.tabs-container {
+  @apply w-[600px] h-[500px] border-2 border-orange-500 bg-orange-500 rounded-xl overflow-hidden relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs {
+  @apply flex space-x-4 text-black border-b-2 border-orange-500;
+}
+
+.content {
+  @apply flex items-center justify-center text-center rounded-lg p-4;
   width: 100%;
   height: 100%;
-  border-radius: 1rem;
-  border: 2px solid rgba(249, 115, 22, 1);
-  box-shadow: 8px 8px 8px rgb(255, 166, 0, 0.8);
-  /* Orange border */
-  transform: translate(-17px, -16px);
-  /* Creates the 3D offset effect */
-  z-index: -1;
-  /* Pushes the pseudo-element behind */
+  /* Ensure it fills the container */
+  box-sizing: border-box;
+  overflow: hidden;
+  /* Prevent content overflow */
+}
+
+.content.live {
+  @apply block;
+}
+
+.content:not(.live) {
+  @apply hidden;
 }
