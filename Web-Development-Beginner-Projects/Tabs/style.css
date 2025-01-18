@@ -7,6 +7,7 @@
 
 body {
   margin: 0;
+  padding: 0;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -51,19 +52,28 @@ body {
 }
 
 .button:not(.live) {
-  background-color: white;
-  color: orange;
+  background-color: #ff8614;
+  color: white;
+  border: 2px solid white;
   font-weight: bold;
 }
 
 .button:is(.live) {
-  background-color: #F97316;
-  border: 2px solid white;
+  background-color: white;
+  color: #ff8614;
+  border: 2px solid #ff8614;
+}
+
+.button:is(.live) div {
+  display: inline-flex;
+  background-color: #f4b67d;
+  opacity: 50;
 }
 
 .button:hover:not(.live) {
-  background: #e93b81;
+  background: #ff8614;
   color: white;
+  border: 2px solid white;
 }
 
 .content.live {
@@ -71,9 +81,10 @@ body {
 }
 
 .tabs-container {
-  @apply w-[600px] h-[500px] border-2 border-orange-500 bg-orange-500 rounded-xl overflow-hidden relative;
+  @apply w-[600px] h-[500px] border-2 border-orange-500 bg-orange-500 rounded-xl relative;
   display: flex;
   flex-direction: column;
+  gap: 0;
 }
 
 .tabs {

@@ -14,35 +14,38 @@
 <body class="w-full min-h-screen flex justify-center items-center bg-gradient-to-t from-indigo-900 to-indigo-950">
   <div class="w-full h-full grid-background absolute"></div>
   <section
-    class="tabs-container border-2 border-orange-500 px-3 py-3 bg-orange-500 rounded-xl overflow-hidden after-3d">
+    class="tabs-container w-[600px] h-[500px] border-2 border-orange-500 px-2 py-2 bg-orange-500 rounded-xl">
     <!-- Tabs -->
     <div class="tabs flex space-x-4 text-black border-b-2 border-orange-500 pb-2" role="tablist">
       <button class="button live px-4 py-2 border-2 border-orange-500 rounded-md" data-id="tab1" role="tab"
         aria-selected="true" aria-controls="tab1">
-        Tab 1
+      <p class="flex justify-center items-center bg-white rounded-full p-1 text-xl">🍓</p>
       </button>
       <button class="button px-4 py-2 border-2 border-orange-500 rounded-md" data-id="tab2" role="tab"
         aria-selected="false" aria-controls="tab2">
-        Tab 2
+      <p class="flex justify-center items-center bg-white rounded-full p-1 text-xl">🍎</p>
       </button>
       <button class="button px-4 py-2 border-2 border-orange-500 rounded-md" data-id="tab3" role="tab"
         aria-selected="false" aria-controls="tab3">
-        Tab 3
+      <p class="flex justify-center items-center bg-white rounded-full p-1 text-xl">🍊</p>
       </button>
     </div>
 
     <!-- Tab Contents -->
-    <div id="tab1" class="content live border-2 border-orange-500 w-full h-full p-4" role="tabpanel">
-      <h2 class="text-md font-bold text-black">Content for Tab 1</h2>
-      <p class="text-md font-bold text-black">Welcome to Tab 1. Here is some content for the first tab.</p>
+    <div id="tab1" class="content live border-2 border-orange-500 w-full h-full p-4 text-start" role="tabpanel">
+      <h2 class="text-md font-bold text-black font-mono">Strawberry Cake "🍓"</h2>
+      <p class="text-md font-bold text-black font-mono">Recipe for strawberry cake:</p>
+      <img class="w-full h-full object-cover object-top no-repeat" src="./img/strawberry3.png" alt="cake">
     </div>
-    <div id="tab2" class="content border-2 border-orange-500 w-full h-full p-4 hidden" role="tabpanel">
-      <h2 class="text-md font-bold text-black">Content for Tab 2</h2>
-      <p class="text-md font-bold text-black">This is the content for Tab 2. Explore more information here.</p>
+    <div id="tab2" class="content border-2 border-orange-500 w-full h-full p-4 text-start" role="tabpanel">
+      <h2 class="text-md font-bold text-black font-mono">ApplePie"🥧"</h2>  
+      <p class="text-md font-bold text-black font-mono">Recipe for ApplePie:</p>
+      <img class="w-full h-full object-cover object-top no-repeat" src="./img/strawberry3.png" alt="cake">
     </div>
-    <div id="tab3" class="content border-2 border-orange-500 w-full h-full p-4 hidden" role="tabpanel">
-      <h2 class="text-md font-bold text-black">Content for Tab 3</h2>
-      <p class="text-md font-bold text-black">Finally, this is the content for Tab 3. Enjoy exploring!</p>
+    <div id="tab3" class="content border-2 border-orange-500 w-full h-full p-4 text-start" role="tabpanel">
+      <h2 class="text-md font-bold text-black font-mono">Strawberry Cake "🍓"</h2>
+      <p class="text-md font-bold text-black font-mono">Recipe for strawberry cake:</p>
+      <img class="w-full h-full object-cover object-top no-repeat" src="./img/strawberry3.png" alt="cake">
     </div>
   </section>
 
